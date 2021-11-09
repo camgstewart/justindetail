@@ -17,7 +17,7 @@ const Navbar = () => {
                 <Link href="/Services">Contact</Link>
             </li>
             <li className={styles.listItem}>
-                <Button variant="contained">Book Appointment</Button>
+                <Button variant="contained">GET FREE QUOTE</Button>
             </li>            
         </ul>
             

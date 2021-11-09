@@ -1,33 +1,35 @@
 .container {
     width: 100%;
-    height: calc(100vh - 50px);
-    background-color: red;
+    height: 750px;
+    background-color: gray;
     display: flex;
     justify-content: center;
     align-content: center;
+    margin-bottom: 100px;
 }
 
 .card {
     flex: 1;
-    padding: 100px;
-    padding-right: 0;
+    padding: 300px;
+    padding-right: 100;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
 }
 
 .title {
-    font-size: 50px;
+    font-size: 20px;
     margin: 0;
 }
 
 .brand {
     color: yellow;
+    text-transform: uppercase;
+    font-size: 16px;
 }
 
 .desc {
-    font-size: 20px;
+    font-size: 30px;
     margin: 0;
 }
-
