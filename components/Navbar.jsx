@@ -1,28 +1,29 @@
-import styles from "../styles/Navbar.module.css";
-import Link from "next/link";
-import { Button } from "@material-ui/core";
+import Stack from "@mui/material/Stack";
+import Toolbar from "@mui/material/Toolbar";
+import MuiNextLink from "./MuiNextLink";
 
-const Navbar = () => {
-    return (
-        <div className={styles.container}>
-        <Link href="/">Justin Detail</Link>
-        <ul className={styles.list}>
-            <li className={styles.listItem}>
-                <Link href="/Services">About</Link>
-            </li>
-            <li className={styles.listItem}>
-                <Link href="/Services">Services</Link>
-            </li>
-            <li className={styles.listItem}>
-                <Link href="/Services">Contact</Link>
-            </li>
-            <li className={styles.listItem}>
-                <Button variant="contained">GET FREE QUOTE</Button>
-            </li>            
-        </ul>
-            
-        </div>
-    )
-}
+const Navbar = ({ navLinks }) => {
+  return (
+    <Toolbar
+      component="nav"
+      sx={{
+        display: { xs: `none`, md: `flex` },
+      }}
+    >
+      <Stack direction="row" spacing={4}>
+        {navLinks.map(({ title, path }, i) => (
+          <MuiNextLink
+            key={`${title}${i}`}
+            href={path}
+            variant="button"
+            sx={{ color: `black`, opacity: 0.7 }}
+          >
+            {title}
+          </MuiNextLink>
+        ))}
+      </Stack>
+    </Toolbar>
+  );
+};
 
-export default Navbar
+export default Navbar;

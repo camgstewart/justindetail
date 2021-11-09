@@ -1,17 +1,20 @@
-import Head from 'next/head'
-import Image from 'next/image'
-import { Hero } from '../components/Hero'
-import styles from '../styles/Home.module.css'
+import Container from "@mui/material/Container";
+import Hero from "../components/Hero";
 
-export default function Home() {
+const Homepage = () => {
   return (
-    <div className={styles.container}>
-      <Head>
-        <title>Justin Detail</title>
-        <meta name="description" content="Eco Friendly, Mobile Car Detailing" />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-      <Hero />     
-    </div>
-  )
-}
+    <>
+    <Hero
+          imgSrc={`/public/homepage-hero.jpg`}
+          imgAlt="Justin Detail Employee Washing"
+          title="From Express Detail to Full Size and out"
+          subtitle="DETAILING SERVICES WITH A PERSONAL TOUCH"
+        />
+      <Container maxWidth="sm">
+        
+      </Container>
+    </>
+  );
+};
+
+export default Homepage;
